@@ -18,8 +18,6 @@ import { MatButtonModule } from '@angular/material/button'; //buton
 //navbar page custom
 import { MatToolbarModule } from '@angular/material/toolbar';
 
-
-
 @NgModule({
   // chestii create de noi
   declarations: [
