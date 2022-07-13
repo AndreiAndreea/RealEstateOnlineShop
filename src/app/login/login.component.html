@@ -1,15 +1,25 @@
 <div class="container">
-    <form class="example-form">
+    <mat-card style="background-color: rgb(4,39,59);">
+        <mat-card-title style="color:aliceblue">Login page</mat-card-title>
+    </mat-card>
+    <br>
+    <br>
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
         <mat-form-field class="example-full-width" appearance="fill">
             <mat-label>Email</mat-label>
-            <input matInput placeholder="Ex. test@yahoo.com" value="">
+            <input matInput formControlName="email" name="email">
+            <mat-error *ngIf="registerForm.value.email">Email syntax is not correct.</mat-error>
         </mat-form-field>
 
         <mat-form-field class="example-full-width" appearance="fill">
             <mat-label>Password</mat-label>
-            <input matInput placeholder="Ex. test" value="">
+            <input matInput formControlName="password" name="password" type="password"
+                [type]="hide ? 'password' : 'text'">
+            <mat-error *ngIf="registerForm.value.password">Password must be a combination of lower-case, upper-case,
+                numbers and at least 15 characters long</mat-error>
+
+            <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
         </mat-form-field>
     </form>
-
-    <button mat-flat-button color="primary">Login</button>
+    <button mat-flat-button color="primary" type="submit" [disabled]="!registerForm.valid">Login<mat-icon>chevron_right</mat-icon></button>
 </div>

@@ -14,9 +14,13 @@ import { ProductComponent } from './product/product.component'; //toolbar
 //login page custom
 import { MatInputModule } from '@angular/material/input'; //input
 import { MatButtonModule } from '@angular/material/button'; //buton
+import { MatCardModule } from '@angular/material/card'; //card
 
 //navbar page custom
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { HomeComponent } from './home/home.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   // chestii create de noi
@@ -24,7 +28,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     AppComponent,
     LoginComponent,
     NavbarComponent,
-    ProductComponent
+    ProductComponent,
+    HomeComponent
   ],
   // module importate din material
   imports: [
@@ -34,7 +39,10 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatInputModule,
     MatButtonModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    MatCardModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   // acces la unele servicii
   providers: [],
