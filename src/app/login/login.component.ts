@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators, ReactiveFormsModule, ValidationErrors, ValidatorFn } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -8,11 +9,13 @@ import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators, React
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  email: string = "";
+  password: string = "";
+
+  constructor(private route:Router) { }
 
   ngOnInit(): void {
   }
-
 
   registerForm = new FormGroup({
     // name: new FormControl('', [Validators.pattern(/\s/), Validators.required]),
@@ -26,5 +29,19 @@ export class LoginComponent implements OnInit {
   }
 
   hide = true;
+
+  onLogin() {
+    if (this.email === "test@test.com" && this.password === "testTEST12341234")
+    {
+      this.route.navigateByUrl('home');
+      // alert("Login!");
+    }
+    else
+    {
+      this.route.navigateByUrl('page-not-found');
+      //face redirect singur la page-not-found
+      // alert("Wrong password");
+    }
+  }
 
 }

@@ -7,10 +7,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  title: string = "Home Title";
+  buttonDisable: boolean = true;
+  color: string = "green";
+
+  newTitle: string ="test";
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  
+  changeButton(): void {
+    this.title = "New Title";
+    this.color = "red";
+  }
+
+  changeTitle(): void {
+   
+  }
+
+
 }
