@@ -14,7 +14,7 @@ import { ProductComponent } from './product/product.component'; //toolbar
 //login page custom
 import { MatInputModule } from '@angular/material/input'; //input
 import { MatButtonModule } from '@angular/material/button'; //buton
-import { MatCardModule } from '@angular/material/card'; //card
+ import { MatCardModule } from '@angular/material/card'; //card
 
 //navbar page custom
 import { MatToolbarModule } from '@angular/material/toolbar';

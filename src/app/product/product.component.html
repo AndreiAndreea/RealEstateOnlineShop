@@ -1,1 +1,17 @@
-<p>product works!</p>
+<app-navbar>
+
+</app-navbar>
+<div *ngFor="let product of products">
+    <mat-card class="example-card">
+        <mat-card-title>{{product.title}}</mat-card-title>
+        <mat-card-content>
+            {{product.description}}
+        </mat-card-content>
+        <mat-card-content>
+            {{product.price}}
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-button>ADD</button>
+        </mat-card-actions>
+    </mat-card>
+</div>

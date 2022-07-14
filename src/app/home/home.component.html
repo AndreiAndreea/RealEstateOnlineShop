@@ -1,28 +1,14 @@
-<!-- <style>
-        body {
-            background-color: rgb(2, 43, 59);
-        }
-    </style> -->
-<br><br><br>
+
+<app-navbar></app-navbar>
+
+  <br><br><br>
 <b style="color:black;margin-left:45% ; font-size:32.5px" [style.color]="color">
   {{title}}
 
 </b>
 
-
-<button mat-button type="submit" (click)="changeButton()">Update</button>
-
-<mat-form-field class="example-full-width" appearance="fill">
-  <mat-label>Email</mat-label>
-  <input matInput formControlName="email" name="email" [(ngModel)]="newTitle">
-  <!-- <mat-error *ngIf="registerForm.value.email">Email syntax is not correct.</mat-error> -->
-</mat-form-field>
-
-<button mat-button type="submit" (click)="changeTitle()">{{newTitle}}</button>
-
 <div style="margin-top:12%;">
   <img src="assets/images/house2.jpg" style="margin-left:11%">
-  <!-- <div style="margin-right:11% ; margin-top:16%"> -->
 
   <button mat-flat-button style="margin-left:25% ;margin-top:-15%; color:black">Login</button>
 
