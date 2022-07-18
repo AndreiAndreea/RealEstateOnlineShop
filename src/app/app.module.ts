@@ -14,13 +14,16 @@ import { ProductComponent } from './product/product.component'; //toolbar
 //login page custom
 import { MatInputModule } from '@angular/material/input'; //input
 import { MatButtonModule } from '@angular/material/button'; //buton
- import { MatCardModule } from '@angular/material/card'; //card
+import { MatCardModule } from '@angular/material/card'; //card
 
 //navbar page custom
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { HomeComponent } from './home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 
+import { MatTableModule } from '@angular/material/table'; //table
+import { MatBadgeModule } from '@angular/material/badge'; //icon badges
 
 @NgModule({
   // chestii create de noi
@@ -28,7 +31,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AppComponent,
     NavbarComponent,
     ProductComponent,
-    routingComponent
+    routingComponent,
+    ShoppingCartComponent
   ],
   // module importate din material
   imports: [
@@ -41,7 +45,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatIconModule,
     MatCardModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatTableModule,
+    MatBadgeModule
   ],
   // acces la unele servicii
   providers: [],

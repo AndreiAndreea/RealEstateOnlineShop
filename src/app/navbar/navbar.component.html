@@ -1,13 +1,25 @@
 <mat-toolbar color="primary">
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <!-- <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
         <mat-icon>menu</mat-icon>
-    </button>
-    <span>My App</span>
+    </button> -->
+
+    <mat-icon> terrain</mat-icon> &nbsp; Hestia Real Estate
+
     <span class="example-spacer"></span>
-    <button mat-button routerLink="/products">
-       Product
+    <button mat-button routerLink="/home">
+        <mat-icon> home</mat-icon>
+        Home
     </button>
-    <button mat-button >
-       Shopping
+    <button mat-button routerLink="/shopping-cart">
+        <mat-icon matBadge="{{numberOfItems}}" matBadgeColor="warn">shopping_cart</mat-icon>
+        <!-- Include text description of the icon's meaning for screen-readers -->
+        <span class="cdk-visually-hidden">
+            Display the items from the shopping cart.
+        </span>
+        &nbsp;&nbsp; Cart
+    </button>
+    <button mat-button routerLink="/products">
+        <mat-icon>file_copy</mat-icon>
+        Products
     </button>
 </mat-toolbar>
