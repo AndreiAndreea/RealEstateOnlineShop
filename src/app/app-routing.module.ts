@@ -5,9 +5,11 @@ import { LoginComponent } from './login/login.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { ProductComponent } from './product/product.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: "/home", pathMatch: "full" },
+  { path: '', redirectTo: "/welcome", pathMatch: "full" },
+  {path:'welcome',component:WelcomeComponent},
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: "products", component: ProductComponent },
@@ -22,4 +24,4 @@ const routes: Routes = [
 })
 export class AppRoutingModule { }
 
-export const routingComponent = [HomeComponent, LoginComponent, PagenotfoundComponent];
+export const routingComponent = [WelcomeComponent,HomeComponent, LoginComponent, PagenotfoundComponent];

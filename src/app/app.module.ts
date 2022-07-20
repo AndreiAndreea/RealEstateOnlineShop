@@ -10,7 +10,7 @@ import { LoginComponent } from './login/login.component'; //login page
 import { NavbarComponent } from './navbar/navbar.component'; //navbar page
 import { MatIconModule } from '@angular/material/icon'; //icon
 import { ProductComponent } from './product/product.component'; //toolbar
-
+import {MatTooltipModule} from '@angular/material/tooltip';//tooltips
 //login page custom
 import { MatInputModule } from '@angular/material/input'; //input
 import { MatButtonModule } from '@angular/material/button'; //buton
@@ -23,7 +23,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 
 import { MatTableModule } from '@angular/material/table'; //table
-import { MatBadgeModule } from '@angular/material/badge'; //icon badges
+import { MatBadgeModule } from '@angular/material/badge';
+import { WelcomeComponent } from './welcome/welcome.component'; //icon badges
 
 @NgModule({
   // chestii create de noi
@@ -32,7 +33,8 @@ import { MatBadgeModule } from '@angular/material/badge'; //icon badges
     NavbarComponent,
     ProductComponent,
     routingComponent,
-    ShoppingCartComponent
+    ShoppingCartComponent,
+    WelcomeComponent
   ],
   // module importate din material
   imports: [
@@ -47,7 +49,8 @@ import { MatBadgeModule } from '@angular/material/badge'; //icon badges
     FormsModule,
     ReactiveFormsModule,
     MatTableModule,
-    MatBadgeModule
+    MatBadgeModule,
+    MatTooltipModule
   ],
   // acces la unele servicii
   providers: [],

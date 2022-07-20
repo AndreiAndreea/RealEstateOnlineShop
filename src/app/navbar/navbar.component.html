@@ -6,11 +6,14 @@
     <mat-icon> terrain</mat-icon> &nbsp; Hestia Real Estate
 
     <span class="example-spacer"></span>
-    <button mat-button routerLink="/home">
+    <button mat-button matTooltip="Back to home page."
+        aria-label="Button that displays a tooltip when focused or hovered over" routerLink="/home">
         <mat-icon> home</mat-icon>
         Home
     </button>
-    <button mat-button routerLink="/shopping-cart">
+
+    <button mat-button  matTooltip="Shopping cart page"
+    aria-label="Button that displays a tooltip when focused or hovered over" routerLink="/shopping-cart">
         <mat-icon matBadge="{{numberOfItems}}" matBadgeColor="warn">shopping_cart</mat-icon>
         <!-- Include text description of the icon's meaning for screen-readers -->
         <span class="cdk-visually-hidden">
@@ -22,4 +25,10 @@
         <mat-icon>file_copy</mat-icon>
         Products
     </button>
+
+    <!-- <button mat-raised-button
+    matTooltip="Info about the action"
+    aria-label="Button that displays a tooltip when focused or hovered over">
+  Action
+  </button> -->
 </mat-toolbar>
