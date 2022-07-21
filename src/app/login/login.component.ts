@@ -12,7 +12,7 @@ export class LoginComponent implements OnInit {
   email: string = "";
   password: string = "";
 
-  constructor(private route:Router) { }
+  constructor(private route: Router) { }
 
   ngOnInit(): void {
   }
@@ -31,16 +31,16 @@ export class LoginComponent implements OnInit {
   hide = true;
 
   onLogin() {
-    if (this.email === "test@test.com" && this.password === "testTEST12341234")
-    {
+    if (this.email === "test@test.com" && this.password === "testTEST12341234") {
       this.route.navigateByUrl('home');
+      
       // alert("Login!");
     }
-    else
-    {
-      this.route.navigateByUrl('page-not-found');
+    else {
       //face redirect singur la page-not-found
-      // alert("Wrong password");
+      this.route.navigateByUrl('page-not-found');
+      
+      //alert("Wrong password");
     }
   }
 

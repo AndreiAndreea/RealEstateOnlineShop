@@ -24,7 +24,8 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 
 import { MatTableModule } from '@angular/material/table'; //table
 import { MatBadgeModule } from '@angular/material/badge';
-import { WelcomeComponent } from './welcome/welcome.component'; //icon badges
+import { WelcomeComponent } from './welcome/welcome.component';
+import { CustomPipe } from './custom.pipe'; //icon badges
 
 @NgModule({
   // chestii create de noi
@@ -34,7 +35,8 @@ import { WelcomeComponent } from './welcome/welcome.component'; //icon badges
     ProductComponent,
     routingComponent,
     ShoppingCartComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    CustomPipe
   ],
   // module importate din material
   imports: [
