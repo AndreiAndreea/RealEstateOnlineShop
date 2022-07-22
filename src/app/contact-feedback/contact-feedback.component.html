@@ -1,0 +1,37 @@
+<app-navbar></app-navbar>
+<div id="container" style="margin-left:30%;margin-top:10%;">
+    <h1>&bull; Keep in Touch &bull; Contact us!</h1>
+    <div class="underline">
+    </div>
+    <form action="#" method="post" id="contact_form" style="display:inline-block;">
+        <div class="name">
+            <label for="name"></label>
+            <input type="text" placeholder="My name is" name="name" id="name_input" required>
+        </div>
+        <div class="email">
+            <label for="email"></label>
+            <input type="email" placeholder="My e-mail is" name="email" id="email_input" required>
+        </div>
+        <div class="telephone">
+            <label for="name"></label>
+            <input type="text" placeholder="My number is" name="telephone" id="telephone_input" required>
+        </div>
+        <div class="subject">
+            <label for="subject"></label>
+            <select placeholder="Subject line" name="subject" id="subject_input" required>
+                <option disabled hidden selected>Subject line</option>
+                <option>I'd like to buy a house.</option>
+                <option>I'd like to rent a house.</option>
+                <option>I need more details about...</option>
+            </select>
+        </div>
+        <div class="message">
+            <label for="message"></label>
+            <textarea name="message" placeholder="I'd like to chat about" id="message_input" cols="30" rows="5"
+                required></textarea>
+        </div>
+        <div class="submit">
+            <input type="submit" value="Send Message" id="form_button" />
+        </div>
+    </form>
+</div>

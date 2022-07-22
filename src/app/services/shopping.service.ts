@@ -9,9 +9,10 @@ export class ShoppingService {
             id:0,
             title:"67-69 Beverly Park Court",
             state:"Beverly Hills, California, 90210 United States",
-            description: "Gated Stone entry to Villa Firenze which is one of the Great Estates of Los Angeles with Huge Massive Rooms and Acres of Private Grounds!\
+            description:
+            "Gated Stone entry to Villa Firenze which is one of the Great Estates of Los Angeles with Huge Massive Rooms and Acres of Private Grounds!\
              The Property is 9.85 acres mostly flat and includes 67, 68 and 69 Beverly Park lots. Large Motor Court with Central Fountain leads to Grand Stone Entry to Center Hall \
-             and Massive Public rooms with 20' ceilings and stone floors.",
+             and Massive Public rooms with 20' ceilings and stone floors.</div>",
             price: "120,000,000",
             imageSource: "assets/images/products/product1.jpg"
         },

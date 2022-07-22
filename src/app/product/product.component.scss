@@ -1,0 +1,33 @@
+.product {
+    width: 200px;
+    height: 200px;
+    float: left;
+    margin: 20px 10px 20px 10px;
+    display: flex;
+    flex-direction: column;
+    .card-title {
+      flex-shrink: 0;
+    }
+    .card-content {
+      flex-grow: 1;
+      overflow: auto;
+    }
+    .card-buttons {
+      display: flex;
+      justify-content: space-between;
+    }
+    .add-prod-card {
+      width: 200px;
+      height: 200px;
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: aquamarine;
+      margin: 20px 10px 20px 10px;
+      flex-direction: column;
+    }
+    .mat-icon {
+      align-items:center;
+    }
+  }

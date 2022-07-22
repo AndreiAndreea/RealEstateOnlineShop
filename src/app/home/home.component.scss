@@ -1,0 +1,137 @@
+body {
+    height: 100vh;
+  
+  }
+  
+  #two {
+margin-right:40%;
+margin-top:8%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 37px;
+    color: #000000;
+    margin-left:-30%;
+
+  }
+  
+  .box {
+    height: 47px;
+    overflow: hidden;
+    position: relative;
+  }
+  .box::before {
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    content: '';
+    height: 10px;
+    position: absolute;
+  }
+  .box::after {
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    width: 100%;
+    content: '';
+    height: 10px;
+    position: absolute;
+  }
+  
+  p {
+    float: left;
+  }
+  
+  ul {
+    float: right;
+    margin: 0;
+    padding: 0;
+    -webkit-animation: scrollUp 6s ease-in-out infinite normal;
+            animation: scrollUp 6s ease-in-out infinite normal;
+  }
+  ul li {
+    opacity: 1;
+    height: 20px;
+    padding: 10px;
+    list-style: none;
+  }
+  
+  @-webkit-keyframes scrollUp {
+    from {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    to {
+      -webkit-transform: translateY(-80%);
+              transform: translateY(-80%);
+    }
+  }
+  
+  @keyframes scrollUp {
+    from {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    to {
+      -webkit-transform: translateY(-80%);
+              transform: translateY(-80%);
+    }
+  }
+
+.imagewrap {
+  display: inline-block;
+  position: relative;
+  padding: 20px 20px 4px 20px;
+}
+
+.thumbnail {
+  
+  width: 320px;
+  height: 256px;
+  overflow: hidden;
+}
+
+.thumbnail img {
+  
+  opacity: 1;
+  width: 320px;
+  height: auto;
+  transition: all 500ms;
+}
+
+.imagewrap:hover img {
+  // opacity: 0.5;
+  -webkit-filter: blur(4px); /* Chrome, Safari, Opera */
+  filter: blur(4px);
+}
+
+.button1 {
+  position:absolute;
+  top:40%;
+
+}
+
+.ig-btn {
+  // opacity: 0;
+  background-color: rgb(255, 255, 255);
+  right:35%;
+  border:none;
+  border-radius: 20px;
+  min-height: 30px;
+  width: 100px;
+  color:rgb(0, 0, 0);
+  transition: all 500ms;
+  text-transform: uppercase;
+  font-size: 9px;
+}
+
+.ig-btn:hover {
+   background-color: rgb(192, 177, 160);
+}
+
+.imagewrap:hover .ig-btn {
+  opacity: 1;
+}
+
+

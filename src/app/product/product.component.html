@@ -2,7 +2,7 @@
 
 </app-navbar>
 <div *ngFor="let product of products">
-    <mat-card class="example-card">
+    <mat-card class="product">
         <mat-card-title>{{product.title}}</mat-card-title>
         <mat-card-content>
             {{product.description}}
@@ -15,3 +15,7 @@
         </mat-card-actions>
     </mat-card>
 </div>
+<mat-card class="product">
+    <button mat-icon-button routerLink="add-product"><mat-icon class="mat-icon">add</mat-icon></button>
+  </mat-card>
+  

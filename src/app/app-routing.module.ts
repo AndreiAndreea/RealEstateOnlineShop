@@ -6,6 +6,8 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { ProductComponent } from './product/product.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { AddProductComponent } from './add-product/add-product.component';
+import { ContactFeedbackComponent } from './contact-feedback/contact-feedback.component';
 
 const routes: Routes = [
   { path: '', redirectTo: "/welcome", pathMatch: "full" },
@@ -14,6 +16,8 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: "products", component: ProductComponent },
   { path: "shopping-cart", component: ShoppingCartComponent },
+  { path: "products/add-product", component: AddProductComponent },
+  { path: "contact-feedback", component: ContactFeedbackComponent },
   { path: '**', pathMatch: "full", component: PagenotfoundComponent }
 
 ];
@@ -24,4 +28,4 @@ const routes: Routes = [
 })
 export class AppRoutingModule { }
 
-export const routingComponent = [WelcomeComponent,HomeComponent, LoginComponent, PagenotfoundComponent];
+export const routingComponent = [WelcomeComponent,HomeComponent, LoginComponent, PagenotfoundComponent,AddProductComponent,ContactFeedbackComponent];

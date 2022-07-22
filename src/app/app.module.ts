@@ -11,6 +11,7 @@ import { NavbarComponent } from './navbar/navbar.component'; //navbar page
 import { MatIconModule } from '@angular/material/icon'; //icon
 import { ProductComponent } from './product/product.component'; //toolbar
 import {MatTooltipModule} from '@angular/material/tooltip';//tooltips
+import {MatFormFieldModule} from '@angular/material/form-field';
 //login page custom
 import { MatInputModule } from '@angular/material/input'; //input
 import { MatButtonModule } from '@angular/material/button'; //buton
@@ -25,7 +26,11 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { MatTableModule } from '@angular/material/table'; //table
 import { MatBadgeModule } from '@angular/material/badge';
 import { WelcomeComponent } from './welcome/welcome.component';
-import { CustomPipe } from './custom.pipe'; //icon badges
+import { CustomPipe } from './custom.pipe';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
+import { ContactFeedbackComponent } from './contact-feedback/contact-feedback.component';
+// import { AddProductComponent } from './add-product/add-product.component'; //icon badges
 
 @NgModule({
   // chestii create de noi
@@ -36,7 +41,11 @@ import { CustomPipe } from './custom.pipe'; //icon badges
     routingComponent,
     ShoppingCartComponent,
     WelcomeComponent,
-    CustomPipe
+    CustomPipe,
+    ParentComponent,
+    ChildComponent,
+    ContactFeedbackComponent,
+    // AddProductComponent
   ],
   // module importate din material
   imports: [
@@ -52,7 +61,8 @@ import { CustomPipe } from './custom.pipe'; //icon badges
     ReactiveFormsModule,
     MatTableModule,
     MatBadgeModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatFormFieldModule
   ],
   // acces la unele servicii
   providers: [],
