@@ -1,6 +1,6 @@
 <app-navbar></app-navbar>
-<div id="container" style="margin-left:30%;margin-top:10%;">
-    <h1>&bull; Keep in Touch &bull; Contact us!</h1>
+<div id="container" style="margin-left:30%;margin-top:5%;">
+    <h1>&bull; Keep in Touch &bull; <br>Contact us!</h1>
     <div class="underline">
     </div>
     <form action="#" method="post" id="contact_form" style="display:inline-block;">
@@ -31,7 +31,12 @@
                 required></textarea>
         </div>
         <div class="submit">
-            <input type="submit" value="Send Message" id="form_button" />
+            <button mat-stroked-button (click)="openSnackBar()" id="form_button">Send message!</button>
         </div>
     </form>
 </div>
+
+
+  
+   
+
