@@ -10,8 +10,8 @@ import { LoginComponent } from './login/login.component'; //login page
 import { NavbarComponent } from './navbar/navbar.component'; //navbar page
 import { MatIconModule } from '@angular/material/icon'; //icon
 import { ProductComponent } from './product/product.component'; //toolbar
-import {MatTooltipModule} from '@angular/material/tooltip';//tooltips
-import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatTooltipModule } from '@angular/material/tooltip';//tooltips
+import { MatFormFieldModule } from '@angular/material/form-field';
 //login page custom
 import { MatInputModule } from '@angular/material/input'; //input
 import { MatButtonModule } from '@angular/material/button'; //buton
@@ -30,6 +30,9 @@ import { CustomPipe } from './custom.pipe';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { ContactFeedbackComponent } from './contact-feedback/contact-feedback.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+// import { BuyComponent } from './buy/buy.component';
+// import { RentComponent } from './rent/rent.component';
 // import { AddProductComponent } from './add-product/add-product.component'; //icon badges
 
 @NgModule({
@@ -45,6 +48,8 @@ import { ContactFeedbackComponent } from './contact-feedback/contact-feedback.co
     ParentComponent,
     ChildComponent,
     ContactFeedbackComponent,
+    // BuyComponent,
+    // RentComponent,
     // AddProductComponent
   ],
   // module importate din material
@@ -62,7 +67,8 @@ import { ContactFeedbackComponent } from './contact-feedback/contact-feedback.co
     MatTableModule,
     MatBadgeModule,
     MatTooltipModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatSnackBarModule
   ],
   // acces la unele servicii
   providers: [],

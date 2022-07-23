@@ -55,4 +55,8 @@ export class ShoppingService {
     getSize(){
         return this.items.length;
     }
+
+    setSize() {
+        this.items.length--;
+    }
 }

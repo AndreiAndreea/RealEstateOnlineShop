@@ -17,7 +17,7 @@ export class AddProductComponent implements OnInit {
   ngOnInit(): void {
   }
   add() {
-    this.productService.createProduct(this.title, this.description, this.price, "brasov", "poiana brasov");
+    this.productService.createBuyProduct(this.title, this.description, this.price, "brasov", "poiana brasov");
   this.router.navigateByUrl("products");
   }
 }

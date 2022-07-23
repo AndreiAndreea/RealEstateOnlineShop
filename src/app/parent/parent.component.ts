@@ -6,16 +6,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./parent.component.scss']
 })
 export class ParentComponent implements OnInit {
-  receivedChildMessage:string="";
-  messageToSendToParent:string="";
+  receivedChildMessage: string = "";
+  messageToSendToParent: string = "";
+  
   constructor() { }
 
   ngOnInit(): void {
   }
-sendMessageToChild(message:string){
-this.messageToSendToParent=message;
-}
-getMessage(message:string){
-  this.receivedChildMessage=message;
-}
+
+  sendMessageToChild(message: string) {
+    this.messageToSendToParent = message;
+  }
+
+  getMessage(message: string) {
+    this.receivedChildMessage = message;
+  }
 }

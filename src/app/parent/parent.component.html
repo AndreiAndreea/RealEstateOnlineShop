@@ -5,4 +5,4 @@
 <button (click)="sendMessageToChild('Hello child')">
     SendMessageToChild
 </button>
-<app-child [recievedParentMessage]="messageToSendToParent"(messageToEmit)="getMessage($event)"></app-child>
+<app-child [recievedParentMessage]="messageToSendToParent" (messageToEmit)="getMessage($event)"></app-child>

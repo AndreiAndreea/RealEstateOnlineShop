@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../services/product.service';
+import { Product } from '../product/product.component';
 
 @Component({
-  selector: 'app-product',
-  templateUrl: './product.component.html',
-  styleUrls: ['./product.component.scss']
+  selector: 'app-buy',
+  templateUrl: './buy.component.html',
+  styleUrls: ['./buy.component.scss']
 })
-export class ProductComponent implements OnInit {
+export class BuyComponent implements OnInit {
 
   buyProducts: Product[] = [];
 
@@ -17,13 +18,4 @@ export class ProductComponent implements OnInit {
     this.buyProducts = this.productService.getBuyProducts();
   }
 
-}
-
-export interface Product {
-  id: number;
-  title: string;
-  state: string;
-  description: string;
-  price: string;
-  imageSource: string;
 }

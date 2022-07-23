@@ -10,11 +10,17 @@ export class NavbarComponent implements OnInit {
 
   numberOfItems: number = 0;
 
-  constructor(private shoppingService: ShoppingService) {
-    this.numberOfItems = shoppingService.getSize();
+  shoppingService: ShoppingService = new ShoppingService();
+
+  constructor() {
+    this.numberOfItems = this.shoppingService.getSize();
   }
 
   ngOnInit(): void {
+  }
+
+  updateNumberOfItems() {
+    this.numberOfItems = this.shoppingService.getSize();
   }
 
 }
