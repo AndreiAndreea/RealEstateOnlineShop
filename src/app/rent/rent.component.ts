@@ -34,6 +34,7 @@ export class RentComponent implements OnInit {
     this.rentProducts = this.productService.getRentProducts();
   }
 
+
 }
 
 export class PizzaPartyComponent {}

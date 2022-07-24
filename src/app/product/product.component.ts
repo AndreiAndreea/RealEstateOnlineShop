@@ -27,4 +27,5 @@ export interface Product {
   price: string;
   imageSource: string;
   availability:string;
+  readmore:string;
 }

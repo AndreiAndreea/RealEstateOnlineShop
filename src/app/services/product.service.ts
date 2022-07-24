@@ -16,7 +16,8 @@ export class ProductService {
                Press info button for more.",
             price: "13,500,000",
             imageSource: "assets/images/products/buy1.jpg",
-            availability: "Buying"
+            availability: "Buying",
+            readmore:""
         },
         {
             id: 1,
@@ -28,7 +29,8 @@ export class ProductService {
               etc. Press info button for more.",
             price: "14,234,694",
             imageSource: "assets/images/products/buy2.jpg",
-            availability: "Buying"
+            availability: "Buying",
+            readmore:""
         },
         {
             id: 2,
@@ -40,7 +42,8 @@ export class ProductService {
               Press info button for more.",
             price: "14,350,000",
             imageSource: "assets/images/products/buy3.jpg",
-            availability: "Buying"
+            availability: "Buying",
+            readmore:""
         },
         {
             id: 3,
@@ -52,7 +55,8 @@ export class ProductService {
               Press info button for more.",
             price: "10,995,000",
             imageSource: "assets/images/products/buy4.jpg",
-            availability: "Buying"
+            availability: "Buying",
+            readmore:""
         },
         {
             id: 4,
@@ -64,7 +68,8 @@ export class ProductService {
             Press info button for more.",
             price: "14,000,000",
             imageSource: "assets/images/products/buy5.jpg",
-            availability: "Buying"
+            availability: "Buying",
+            readmore:""
         },
         {
             id: 5,
@@ -77,7 +82,8 @@ export class ProductService {
               Press info button for more.",
             price: "14,500,000",
             imageSource: "assets/images/products/buy6.jpg",
-            availability: "Buying"
+            availability: "Buying",
+            readmore:""
         },
         {
             id: 6,
@@ -89,7 +95,8 @@ export class ProductService {
               Press info button for more.",
             price: "13,775,510",
             imageSource: "assets/images/products/buy7.jpg",
-            availability: "Buying"
+            availability: "Buying",
+            readmore:""
         }
     ]
 
@@ -105,7 +112,8 @@ export class ProductService {
               Press info button for more.",
             price: "17,244,898",
             imageSource: "assets/images/products/rent1.jpg",
-            availability: "Renting"
+            availability: "Renting",
+            readmore:""
         },
         {
             id: 1,
@@ -117,7 +125,12 @@ export class ProductService {
               Press info button for more. ",
             price: "18,265,306",
             imageSource: "assets/images/products/rent2.jpg",
-            availability: "Renting"
+            availability: "Renting",
+            readmore:"This remarkable mansion, located in the wonderful town of Cap D Ail and built in 1900, is now for sale. Could this be your new home?\
+             The property enjoys stunning scenery with sea views. You and your loved ones could make great use of the mansion's expansive 540 sq. m of living space.\
+              Another beautiful feature: a 2500 sq. m garden and four balconies. With eight bedrooms, this mansion provides plenty of room for everyone to enjoy their own space.\
+               The mansion comes with fantastic amenities, for example a steam room, a one bedroomed guest or personnel apartment and two more glorious guest suites each finished\
+                to the very highest quality. Its beautiful natural light make this property hard to turn down."
         },
         {
             id: 2,
@@ -129,7 +142,8 @@ export class ProductService {
              Press info button for more.",
             price: "2,551,020",
             imageSource: "assets/images/products/rent3.jpg",
-            availability: "Renting"
+            availability: "Renting",
+            readmore:""
         },
         {
             id: 3,
@@ -141,7 +155,8 @@ export class ProductService {
             Press info button for more. ",
             price: "10,714,286",
             imageSource: "assets/images/products/rent4.jpg",
-            availability: "Renting"
+            availability: "Renting",
+            readmore:""
         },
         {
             id: 4,
@@ -153,7 +168,8 @@ export class ProductService {
             Press info button for more. ",
             price: "16,224,490",
             imageSource: "assets/images/products/rent5.jpg",
-            availability: "Renting"
+            availability: "Renting",
+            readmore:""
         },
         {
             id: 5,
@@ -165,7 +181,8 @@ export class ProductService {
              Press info button for more.",
             price: "6,122,449",
             imageSource: "assets/images/products/rent6.jpg",
-            availability: "Renting"
+            availability: "Renting",
+            readmore:""
         },
         {
             id: 6,
@@ -178,7 +195,8 @@ export class ProductService {
              Press info button for more.",
             price: "1,158,915",
             imageSource: "assets/images/products/rent7.jpg",
-            availability: "Renting"
+            availability: "Renting",
+            readmore:""
         }
     ]
 
@@ -190,7 +208,7 @@ export class ProductService {
         return this.rentProducts;
     }
 
-    createBuyProduct(newTitle: string, newDescription: string, newPrice: string, newState: string, newImageSource: string, avl: string) {
+    createBuyProduct(newTitle: string, newDescription: string, newPrice: string, newState: string, newImageSource: string, avl: string,more:string) {
         const product = {
             id: 123,
             description: newDescription,
@@ -198,13 +216,14 @@ export class ProductService {
             price: newPrice,
             state: newState,
             imageSource: newImageSource,
-            availability: avl
+            availability: avl,
+            readmore:more
         };
 
         return this.buyProducts.push(product);
     }
 
-    createRentProduct(newTitle: string, newDescription: string, newPrice: string, newState: string, newImageSource: string, avl: string) {
+    createRentProduct(newTitle: string, newDescription: string, newPrice: string, newState: string, newImageSource: string, avl: string,more:string) {
         const product = {
             id: 123,
             description: newDescription,
@@ -212,7 +231,8 @@ export class ProductService {
             price: newPrice,
             state: newState,
             imageSource: newImageSource,
-            availability: avl
+            availability: avl,
+            readmore:more
         };
 
         return this.rentProducts.push(product);

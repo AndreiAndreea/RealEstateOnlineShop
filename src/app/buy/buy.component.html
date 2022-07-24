@@ -25,13 +25,25 @@
         </p>
     </mat-card-content>
     <mat-card-actions>
-        <button mat-button mat-button matTooltip="Read more!"
-        aria-label="Button that displays a tooltip that has custom delays through a default config">
-            <mat-icon>info</mat-icon>
-        </button>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+            <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
+            <div id="wrapper">
+                <input type="radio" id="open" name="popup">
+                <input type="radio" id="close" name="popup">
+                <div id="popup">
+                    <label id="button" for="open" matTooltip="Read more."
+                    aria-label="Button that displays a tooltip that has custom delays through a default config"><mat-icon>info</mat-icon></label>
+                </div>
+                <div id="overlay"></div>
+                <div id="info">
+                    <h1>More about this product</h1>
+                    {{item.readmore}}
+                    <label id="close" for="close"><i class="fa fa-times-circle fa-lg"></i></label>
+                </div>
+            </div>
         <button mat-button mat-button matTooltip="Add product to shopping-cart"
             aria-label="Button that displays a tooltip that has custom delays through a default config"
-            style="margin-left: 62%;">
+            style="margin-left: 80%;">
             <mat-icon>add_shopping_cart</mat-icon>
         </button>
 
