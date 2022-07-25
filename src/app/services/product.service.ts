@@ -1,5 +1,6 @@
 import { Injectable } from "@angular/core";
 import { Product } from "../product/product.component";
+import { ShoppingCart } from "../shopping-cart/shopping-cart.component";
 
 @Injectable({ providedIn: "root" })
 
@@ -17,7 +18,7 @@ export class ProductService {
             price: "13,500,000",
             imageSource: "assets/images/products/buy1.jpg",
             availability: "Buying",
-            readmore:""
+            readmore:"test"
         },
         {
             id: 1,
@@ -113,7 +114,7 @@ export class ProductService {
             price: "17,244,898",
             imageSource: "assets/images/products/rent1.jpg",
             availability: "Renting",
-            readmore:""
+            readmore:"test"
         },
         {
             id: 1,
@@ -236,6 +237,10 @@ export class ProductService {
         };
 
         return this.rentProducts.push(product);
+    }
+
+    getProductDetails(item: ShoppingCart) {
+        
     }
 
 }

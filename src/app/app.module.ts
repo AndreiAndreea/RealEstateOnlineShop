@@ -32,6 +32,9 @@ import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { ContactFeedbackComponent } from './contact-feedback/contact-feedback.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatDialogModule } from '@angular/material/dialog';
+import { CustomDialogComponent } from './custom-dialog/custom-dialog.component';
+import { SnackBarComponent } from './snack-bar/snack-bar.component';
 // import { BuyComponent } from './buy/buy.component';
 // import { RentComponent } from './rent/rent.component';
 // import { AddProductComponent } from './add-product/add-product.component'; //icon badges
@@ -49,6 +52,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     ParentComponent,
     ChildComponent,
     ContactFeedbackComponent,
+    CustomDialogComponent,
+    SnackBarComponent,
     // BuyComponent,
     // RentComponent,
     // AddProductComponent
@@ -69,7 +74,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatBadgeModule,
     MatTooltipModule,
     MatFormFieldModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatDialogModule
   ],
   // acces la unele servicii
   providers: [],

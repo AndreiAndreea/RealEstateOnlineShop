@@ -11,7 +11,14 @@
 
 <mat-card class="example-card" *ngFor="let item of rentProducts">
     <div style="text-align:center;">
-        <mat-card-title style="text-align: center">{{item.title}}</mat-card-title>
+        <mat-card-title style="text-align: center">
+            <button mat-button mat-button matTooltip="Edit the product"
+                aria-label="Button that displays a tooltip that has custom delays through a default config"
+                style="margin-bottom: 12px;">
+                <mat-icon (click)="openDialog(item)">edit</mat-icon>
+            </button>
+        </mat-card-title>
+        <mat-card-title style="text-align: center">{{item.title}} </mat-card-title>
         <mat-card-subtitle>{{item.state}}</mat-card-subtitle>
         <mat-card-subtitle style="color:black;">Price (1 year rent): <b>${{item.price}}</b></mat-card-subtitle>
         <mat-card-subtitle style="color:black;">Up For: <b>{{item.availability}}</b></mat-card-subtitle>
@@ -22,7 +29,7 @@
             &nbsp;&nbsp; {{item.description}}
         </p>
     </mat-card-content>
-    <mat-card-actions >
+    <mat-card-actions>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
         <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
         <div id="wrapper">
@@ -30,19 +37,21 @@
             <input type="radio" id="close" name="popup">
             <div id="popup">
                 <label id="button" for="open" matTooltip="Read more."
-                aria-label="Button that displays a tooltip that has custom delays through a default config"><mat-icon>info</mat-icon></label>
+                    aria-label="Button that displays a tooltip that has custom delays through a default config">
+                    <mat-icon>info</mat-icon>
+                </label>
             </div>
             <div id="overlay"></div>
-            <div id="info" >
+            <div id="info">
                 <h1>More about this product</h1>
-    No more info about this product. Please contact an agent.
+                {{item.readmore}}
                 <label id="close" for="close"><i class="fa fa-times-circle fa-lg"></i></label>
             </div>
         </div>
         <button mat-button mat-button matTooltip="Add product to shopping-cart"
             aria-label="Button that displays a tooltip that has custom delays through a default config"
             style="margin-left: 80%;">
-            <mat-icon>add_shopping_cart</mat-icon>
+            <mat-icon (click)="addItemToShoppingCart(item)" (click)="openSnackBar()">add_shopping_cart</mat-icon>
         </button>
     </mat-card-actions>
 </mat-card>

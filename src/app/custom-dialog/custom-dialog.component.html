@@ -1,0 +1,34 @@
+<h2>Product information</h2>
+<b>Current title </b>
+<input [(ngModel)]="title" name="inputTitle" matInput placeholder="Title" class="custom-input" value="{{title}}">
+<br><br>
+<b>Current state </b>
+<input [(ngModel)]="state" name="inputState" matInput placeholder="State" class="custom-input"value="{{state}}">
+<br><br>
+
+<b>Current description </b>
+<textarea matInput placeholder="Ex. It makes me feel..." cols="120" rows="5" class="custom-input" >{{description}}</textarea>
+<!-- <input [(ngModel)]="description" name="inputDescription" matInput placeholder="Description" value="{{description}}"> -->
+<br><br>
+
+<b>Current price ($)</b>
+<input [(ngModel)]="price" name="inputState" matInput placeholder="Price" class="custom-input"value="{{price}}">
+<br><br>
+
+<b>Current availability </b>
+<input [(ngModel)]="availability" name="inputAvailability" matInput placeholder="Availability" class="custom-input" value="{{availability}}">
+<br><br>
+
+<b>Current readmore </b>
+<textarea matInput placeholder="Ex. beautiful house" cols="100" rows="2" class="custom-input">{{readmore}}</textarea>
+<!-- <input [(ngModel)]="readmore" name="inputReadmore" matInput placeholder="Readmore" value="{{readmore}}"> -->
+<br><br>
+
+<b>Current imageSource </b>
+ <input [(ngModel)]="imageSource" name="inputImageSource" matInput placeholder="imageSource" class="custom-input" value="{{imageSource}}">
+<br><br>
+
+<div>
+    <button mat-raised-button color="warn" (click)="closeDialog()">Close</button>
+    <button mat-raised-button color="primary" (click)="saveDialog()" style="margin-left:81%;">Save</button>
+</div>

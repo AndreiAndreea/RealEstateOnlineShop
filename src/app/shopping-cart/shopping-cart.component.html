@@ -31,7 +31,7 @@
         </button>
         <button mat-button mat-button matTooltip="Removes product from shopping-cart"
             aria-label="Button that displays a tooltip that has custom delays through a default config"
-            style="margin-left: 67%;" (click) = "removeItemShoppingCart(item)">
+            style="margin-left: 67%;" (click) = "removeItemShoppingCart(item)" (click) = "openSnackBar()">
             <mat-icon>delete</mat-icon>
         </button>
 

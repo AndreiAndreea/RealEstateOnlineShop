@@ -10,9 +10,7 @@ export class NavbarComponent implements OnInit {
 
   numberOfItems: number = 0;
 
-  shoppingService: ShoppingService = new ShoppingService();
-
-  constructor() {
+  constructor(private shoppingService: ShoppingService) {
     this.numberOfItems = this.shoppingService.getSize();
   }
 

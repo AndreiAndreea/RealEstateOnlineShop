@@ -11,13 +11,13 @@ export class AddProductComponent implements OnInit {
   description: string = "";
   price: string = "";
 
-
   constructor(private productService: ProductService, private router: Router) { }
 
   ngOnInit(): void {
   }
+
   add() {
-    this.productService.createBuyProduct(this.title, this.description, this.price, "brasov", "poiana brasov","to buy","sdjcnksjdc");
-  this.router.navigateByUrl("products");
+    this.productService.createBuyProduct(this.title, this.description, this.price, "brasov", "poiana brasov", "to buy", "sdjcnksjdc");
+    this.router.navigateByUrl("products");
   }
 }

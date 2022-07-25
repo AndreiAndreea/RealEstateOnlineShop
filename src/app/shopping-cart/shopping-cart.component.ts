@@ -3,6 +3,8 @@ import { ShoppingService } from '../services/shopping.service';
 import { CustomPipe } from '../custom.pipe';
 import { NavbarComponent } from '../navbar/navbar.component';
 import { AnimationDriver } from '@angular/animations/browser';
+import { SnackBarComponent } from '../snack-bar/snack-bar.component';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-shopping-cart',
@@ -11,14 +13,13 @@ import { AnimationDriver } from '@angular/animations/browser';
 })
 export class ShoppingCartComponent implements OnInit {
 
+  durationInSeconds = 3;
 
   items: ShoppingCart[] = [];
 
   itemsValue: number = 0;
 
-  constructor(private shoppingService: ShoppingService) {
-
-    
+  constructor(private shoppingService: ShoppingService, private _snackBar: MatSnackBar ) {
   }
 
   ngOnInit(): void {
@@ -30,13 +31,32 @@ export class ShoppingCartComponent implements OnInit {
   removeItemShoppingCart(deleteItem: ShoppingCart) {
 
       let currentIndex = this.items.indexOf(deleteItem);
-      this.items.splice(currentIndex, currentIndex);
+      this.items.splice(currentIndex, 1);
 
-      return this.items;
-      //this.shoppingService.setSize();
-      
+      console.log(this.items.length);      
   }
 
+  openSnackBar() {
+    this._snackBar.openFromComponent(PizzaPartyComponent, {
+      duration: this.durationInSeconds * 1000,
+    });
+  }
+}
+
+@Component({
+  selector: 'app-snack-bar',
+  templateUrl: '../snack-bar/snack-bar.component.html',
+  styles: [
+    `
+    .example-pizza-party {
+      color: hotpink;
+    }
+  `,
+  ],
+})
+
+export class PizzaPartyComponent {
+  text: string = "Item removed from shopping-cart!";
 }
 
 export interface ShoppingCart {

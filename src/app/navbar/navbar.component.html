@@ -15,15 +15,11 @@
     <button mat-button  matTooltip="Shopping cart page"
     aria-label="Button that displays a tooltip when focused or hovered over" routerLink="/shopping-cart">
         <mat-icon matBadge="{{numberOfItems}}" matBadgeColor="warn">shopping_cart</mat-icon>
-        <!-- Include text description of the icon's meaning for screen-readers -->
+        <!-- <mat-icon matBadgeColor="warn">shopping_cart</mat-icon> -->
         <span class="cdk-visually-hidden">
             Display the items from the shopping cart.
         </span>
         &nbsp;&nbsp; Cart
-    </button>
-    <button mat-button routerLink="/products">
-        <mat-icon>file_copy</mat-icon>
-        Products
     </button>
     <button mat-button routerLink="/contact-feedback">
         <mat-icon>feedback</mat-icon>
