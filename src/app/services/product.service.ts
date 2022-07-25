@@ -18,7 +18,7 @@ export class ProductService {
             price: "13,500,000",
             imageSource: "assets/images/products/buy1.jpg",
             availability: "Buying",
-            readmore:"test"
+            readmore:""
         },
         {
             id: 1,
@@ -114,7 +114,7 @@ export class ProductService {
             price: "17,244,898",
             imageSource: "assets/images/products/rent1.jpg",
             availability: "Renting",
-            readmore:"test"
+            readmore:""
         },
         {
             id: 1,
